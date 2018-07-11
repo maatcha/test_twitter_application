@@ -1,5 +1,5 @@
-
 require 'dotenv'
+Dotenv.load
 # ligne très importante qui appelle la gem. Sans elle, le programme ne saura pas appeler Twitter
 require 'twitter'
 
@@ -11,5 +11,9 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = ENV["FIRST_ACCESS_TOKEN_SECRET"]
 end
 
-# ligne qui permet de tweeter
+# # ligne qui permet de tweeter
+
 p client
+
+#client.update("ça marche ou pas ????!!!")
+#client.follow("HermetNicolas")
